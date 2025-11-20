@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings – Interactive Report</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <!-- Reveal.js core styles -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    .subtitle {
+      font-size: 0.7em;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- TITLE SLIDE -->
+    <section>
+      <h2>Q2 Quarterly Earnings Report</h2>
+      <p class="subtitle">Technical Insights & Interactive Visuals</p>
+      <p>Prepared by: Technical Consultant</p>
+      <p>Email: <strong>24f3003270@ds.study.iitm.ac.in</strong></p>
+
+      <aside class="notes">
+        Welcome everyone. This deck showcases not only the earnings results but also modern
+        presentation capabilities using RevealJS: animations, code, and math-aware slides.
+      </aside>
+    </section>
+
+    <!-- MARKDOWN SLIDE (data-markdown) -->
+    <section data-markdown>
+      <textarea data-template>
+## Business Highlights (Markdown Slide)
+
+- Revenue growth: **12.3% YoY**
+- Net income margin: **18.5%**
+- Cost-to-income ratio: **52%**
+- Digital transaction share: **72%**
+
+> All figures are preliminary and subject to audit.
+
+Note:
+- This entire slide is authored in Markdown.
+- Use it for quick edits in plain text.
+      </textarea>
+    </section>
+
+    <!-- FRAGMENTS / ANIMATED BULLETS -->
+    <section>
+      <h2>Revenue Breakdown</h2>
+      <p>Key revenue streams this quarter:</p>
+      <ul>
+        <li class="fragment">Retail Banking – 45%</li>
+        <li class="fragment">Corporate Banking – 30%</li>
+        <li class="fragment">Treasury & Markets – 15%</li>
+        <li class="fragment">Wealth Management – 10%</li>
+      </ul>
+
+      <aside class="notes">
+        Walk through each fragment slowly to explain the shift towards retail and wealth
+        management. Emphasize diversification and stability of earnings.
+      </aside>
+    </section>
+
+    <!-- MATH / FINANCIAL FORMULAS -->
+    <section>
+      <h2>Key Financial Formulae</h2>
+
+      <p>Net Present Value (NPV):</p>
+      <p>
+        \[
+          \text{NPV} = \sum_{t=0}^{T} \frac{CF_t}{(1 + r)^t}
+        \]
+      </p>
+
+      <p>Capital Asset Pricing Model (CAPM):</p>
+      <p>
+        \[
+          E(R_i) = R_f + \beta_i \big( E(R_m) - R_f \big)
+        \]
+      </p>
+
+      <aside class="notes">
+        Use these equations to connect the earnings discussion with valuation.
+        For NPV, highlight how changes in discount rate impact project viability.
+        For CAPM, relate beta and market risk to our cost of equity.
+      </aside>
+    </section>
+
+    <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+    <section>
+      <h2>Scenario Analysis (Code Sample)</h2>
+      <p>Example: simple JavaScript function for CAGR calculation.</p>
+
+      <pre><code class="language-javascript">
+// Compute Compound Annual Growth Rate (CAGR)
+function cagr(beginValue, endValue, years) {
+  if (beginValue <= 0 || years <= 0) {
+    throw new Error("Invalid inputs");
+  }
+  return Math.pow(endValue / beginValue, 1 / years) - 1;
+}
+
+// Example: Net income from 1200 to 1800 over 3 years
+const result = cagr(1200, 1800, 3);
+console.log("CAGR:", (result * 100).toFixed(2) + "%");
+      </code></pre>
+
+      <aside class="notes">
+        Explain that this snippet could power an internal analytics dashboard.
+        Mention that similar logic can be embedded in our tooling for quick
+        what-if analyses during reviews.
+      </aside>
+    </section>
+
+    <!-- CONCLUSION / CONTACT -->
+    <section>
+      <h2>Summary & Next Steps</h2>
+      <ul>
+        <li class="fragment">Strong topline growth with improving margins</li>
+        <li class="fragment">Risk-weighted assets managed within target bands</li>
+        <li class="fragment">Digital adoption continues to accelerate</li>
+        <li class="fragment">Action items: scenario testing & capital planning</li>
+      </ul>
+
+      <p class="fragment">
+        Contact: <strong>24f3003270@ds.study.iitm.ac.in</strong>
+      </p>
+
+      <aside class="notes">
+        Close by summarizing the quarter and outlining action items.
+        Invite questions and highlight that the deck is hosted on GitHub Pages,
+        which allows interactive distribution to all stakeholders.
+      </aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js core library -->
+<script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+<!-- Plugins: Markdown, Highlight, Notes, Math -->
+<script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+<script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+    slideNumber: true
+  });
+</script>
+</body>
+</html>
